@@ -8,3 +8,7 @@ export const formatAddress = (address: string): string => {
 export const formatAmount = (amount: number, decimals: number = 8): string => {
     return (amount / Math.pow(10, decimals)).toFixed(decimals);
 };
+
+export const formatDate = (timestamp: number): string => {
+    return new Date(timestamp).toLocaleDateString();
+};
