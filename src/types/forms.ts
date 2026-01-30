@@ -5,3 +5,11 @@ export interface TransferFormData {
     amount: string;
     memo: string;
 }
+
+export interface BatchFormData {
+    recipients: Array<{
+        address: string;
+        amount: string;
+        memo: string;
+    }>;
+}
