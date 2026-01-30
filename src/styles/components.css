@@ -26,3 +26,17 @@
     border: 1px solid var(--color-primary);
     color: var(--color-primary);
 }
+
+/* Card styles */
+.card {
+    background: var(--color-surface);
+    border-radius: 12px;
+    padding: var(--spacing-lg);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+    font-size: var(--font-size-xl);
+    font-weight: 600;
+    margin-bottom: var(--spacing-md);
+}
