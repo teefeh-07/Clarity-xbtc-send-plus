@@ -11,3 +11,9 @@ export interface BatchTransaction {
     totalAmount: number;
     timestamp: number;
 }
+
+export enum TransactionStatus {
+    PENDING = 'pending',
+    SUCCESS = 'success',
+    FAILED = 'failed'
+}
