@@ -14,8 +14,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'npm'
-      - run: npm install
+      - run: npm ci
       - run: npm run build
         continue-on-error: true
   
@@ -26,6 +25,6 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - run: npm install
+      - run: npm ci
       - run: npx tsc --noEmit
         continue-on-error: true
