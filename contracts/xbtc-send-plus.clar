@@ -5,3 +5,7 @@
 (define-constant ERR-UNAUTHORIZED (err u100))
 (define-constant ERR-INVALID-AMOUNT (err u101))
 (define-constant ERR-TRANSFER-FAILED (err u102))
+
+;; Data variables
+(define-data-var contract-owner principal tx-sender)
+(define-data-var total-transfers uint u0)
