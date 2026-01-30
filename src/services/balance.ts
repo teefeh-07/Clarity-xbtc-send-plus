@@ -9,3 +9,10 @@ export const fetchStxBalance = async (address: string): Promise<number> => {
     const data = await response.json();
     return parseInt(data.balance || '0');
 };
+
+export const fetchTokenBalances = async (address: string) => {
+    const response = await fetch(
+        `${API_BASE}/extended/v1/address/${address}/balances`
+    );
+    return response.json();
+};
