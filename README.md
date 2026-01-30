@@ -29,3 +29,13 @@ npm run dev
 # Build for production
 npm run build
 ```
+
+## Smart Contracts
+
+- `xbtc-send-many.clar` - Original batch transfer contract
+- `xbtc-send-plus.clar` - Enhanced transfer with tracking
+- `transfer-log.clar` - Transfer logging and history
+
+## License
+
+GPL-3.0
