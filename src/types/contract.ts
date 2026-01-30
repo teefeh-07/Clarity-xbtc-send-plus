@@ -6,3 +6,9 @@ export interface ContractCallOptions {
     functionName: string;
     functionArgs: any[];
 }
+
+export interface ContractDeployOptions {
+    codeBody: string;
+    contractName: string;
+    network: 'mainnet' | 'testnet';
+}
