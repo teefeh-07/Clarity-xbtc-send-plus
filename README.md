@@ -1,5 +1,11 @@
-# clarity-xbtc-send-many
-Clarity contract for sending xbtc to many recipients in one transaction
+# Clarity xBTC Send Plus
 
-dev branch contains work in progress and deployed contracts to testnet
-main branch deployed contracts to mainnet
+A powerful Stacks blockchain application for efficient xBTC batch transfers.
+
+## Features
+
+- Single and batch xBTC transfers
+- Automatic xBTC to STX swap integration
+- Wallet integration (Hiro Wallet, WalletConnect)
+- Transaction history tracking
+- Real-time balance updates
