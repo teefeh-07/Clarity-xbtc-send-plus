@@ -9,3 +9,12 @@ export const setItem = <T>(key: string, value: T): void => {
         console.error('Failed to save to localStorage:', error);
     }
 };
+
+export const getItem = <T>(key: string, defaultValue: T): T => {
+    try {
+        const item = localStorage.getItem(PREFIX + key);
+        return item ? JSON.parse(item) : defaultValue;
+    } catch {
+        return defaultValue;
+    }
+};
