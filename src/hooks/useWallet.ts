@@ -1,9 +1,18 @@
 // Custom wallet hook
 
 import { useState, useCallback } from 'react';
+import { useStacks } from '../context/StacksContext';
 
 export const useWallet = () => {
-    const [connected, setConnected] = useState(false);
+    const { userData, authenticate } = useStacks();
     
-    return { connected };
+    const connect = useCallback(() => {
+        authenticate();
+    }, [authenticate]);
+    
+    return { 
+        connected: !!userData,
+        address: userData?.profile?.stxAddress?.mainnet,
+        connect
+    };
 };
