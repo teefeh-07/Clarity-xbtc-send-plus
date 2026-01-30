@@ -16,3 +16,16 @@ A powerful Stacks blockchain application for efficient xBTC batch transfers.
 - **Blockchain**: Stacks, Clarity 4
 - **Wallet**: @stacks/connect, WalletConnect
 - **Styling**: CSS Variables, Custom Design System
+
+## Quick Start
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+```
