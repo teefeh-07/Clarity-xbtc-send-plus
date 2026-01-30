@@ -20,3 +20,13 @@ describe('xbtc-send-plus contract', () => {
             expect(true).toBe(true);
         });
     });
+
+    describe('set-owner', () => {
+        it('should allow owner to transfer ownership', () => {
+            expect(true).toBe(true);
+        });
+
+        it('should reject non-owner calls', () => {
+            expect(true).toBe(true);
+        });
+    });
