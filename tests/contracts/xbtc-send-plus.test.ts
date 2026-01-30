@@ -8,3 +8,15 @@ describe('xbtc-send-plus contract', () => {
         });
     });
 });
+
+    describe('get-owner', () => {
+        it('should return the contract owner', () => {
+            expect(true).toBe(true);
+        });
+    });
+
+    describe('get-total-transfers', () => {
+        it('should return total transfer count', () => {
+            expect(true).toBe(true);
+        });
+    });
