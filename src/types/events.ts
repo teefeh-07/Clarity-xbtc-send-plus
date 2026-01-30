@@ -11,3 +11,10 @@ export interface TransactionSubmittedEvent {
     txId: string;
     timestamp: number;
 }
+
+export interface TransactionConfirmedEvent {
+    type: 'TRANSACTION_CONFIRMED';
+    txId: string;
+    blockHeight: number;
+    timestamp: number;
+}
