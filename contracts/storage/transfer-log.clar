@@ -25,3 +25,11 @@
             })
         (var-set log-counter (+ id u1))
         (ok id)))
+
+;; Get log entry
+(define-read-only (get-log (id uint))
+    (map-get? transfer-logs { id: id }))
+
+;; Get total logs
+(define-read-only (get-log-count)
+    (ok (var-get log-counter)))
