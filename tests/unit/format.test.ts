@@ -12,3 +12,13 @@ describe('formatAddress', () => {
         expect(formatAddress('')).toBe('');
     });
 });
+
+describe('formatAmount', () => {
+    it('should format with default decimals', () => {
+        expect(formatAmount(100000000)).toBe('1.00000000');
+    });
+
+    it('should respect custom decimals', () => {
+        expect(formatAmount(1000, 2)).toBe('10.00');
+    });
+});
