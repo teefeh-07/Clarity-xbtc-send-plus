@@ -9,3 +9,7 @@ Ensure your wallet extension is installed and unlocked.
 ## Transaction Pending
 
 Transactions may take a few minutes to confirm.
+
+## Insufficient Funds
+
+Verify you have enough STX for gas fees.
