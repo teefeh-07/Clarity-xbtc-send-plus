@@ -5,3 +5,9 @@ export interface WalletState {
     address: string | null;
     balance: number;
 }
+
+export interface WalletProvider {
+    connect: () => Promise<void>;
+    disconnect: () => Promise<void>;
+    getAddress: () => string | null;
+}
