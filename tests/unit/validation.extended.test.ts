@@ -23,3 +23,14 @@ describe('isValidAmount', () => {
         expect(isValidAmount(-1)).toBe(false);
     });
 });
+
+describe('isValidMemo', () => {
+    it('should accept valid memos', () => {
+        expect(isValidMemo('Hello')).toBe(true);
+        expect(isValidMemo('')).toBe(true);
+    });
+
+    it('should reject long memos', () => {
+        expect(isValidMemo('a'.repeat(35))).toBe(false);
+    });
+});
