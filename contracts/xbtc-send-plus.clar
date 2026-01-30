@@ -25,3 +25,10 @@
         (var-set total-transfers (+ (var-get total-transfers) u1))
         (print memo)
         (ok true)))
+
+;; Admin functions
+(define-public (set-owner (new-owner principal))
+    (begin
+        (asserts! (is-eq tx-sender (var-get contract-owner)) ERR-UNAUTHORIZED)
+        (var-set contract-owner new-owner)
+        (ok true)))
