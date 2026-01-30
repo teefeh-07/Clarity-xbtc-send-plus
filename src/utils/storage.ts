@@ -18,3 +18,13 @@ export const getItem = <T>(key: string, defaultValue: T): T => {
         return defaultValue;
     }
 };
+
+export const removeItem = (key: string): void => {
+    localStorage.removeItem(PREFIX + key);
+};
+
+export const clear = (): void => {
+    Object.keys(localStorage)
+        .filter(key => key.startsWith(PREFIX))
+        .forEach(key => localStorage.removeItem(key));
+};
