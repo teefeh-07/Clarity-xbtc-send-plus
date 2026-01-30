@@ -5,3 +5,9 @@ export interface WalletConnectedEvent {
     address: string;
     timestamp: number;
 }
+
+export interface TransactionSubmittedEvent {
+    type: 'TRANSACTION_SUBMITTED';
+    txId: string;
+    timestamp: number;
+}
