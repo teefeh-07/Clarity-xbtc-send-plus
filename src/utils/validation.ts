@@ -7,3 +7,7 @@ export const isValidStacksAddress = (address: string): boolean => {
 export const isValidAmount = (amount: number): boolean => {
     return amount > 0 && Number.isFinite(amount);
 };
+
+export const isValidMemo = (memo: string): boolean => {
+    return memo.length <= 34;
+};
