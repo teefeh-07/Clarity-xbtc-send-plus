@@ -13,3 +13,9 @@ export interface WalletState {
         xbtc: number;
     };
 }
+
+export interface TransactionState {
+    pending: string[];
+    confirmed: string[];
+    failed: string[];
+}
