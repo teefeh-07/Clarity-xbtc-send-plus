@@ -16,3 +16,12 @@
 
 (define-read-only (get-total-transfers)
     (ok (var-get total-transfers)))
+
+;; Transfer with tracking
+(define-public (transfer-stx-tracked (amount uint) (recipient principal) (memo (buff 34)))
+    (begin
+        (asserts! (> amount u0) ERR-INVALID-AMOUNT)
+        (try! (stx-transfer? amount tx-sender recipient))
+        (var-set total-transfers (+ (var-get total-transfers) u1))
+        (print memo)
+        (ok true)))
