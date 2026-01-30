@@ -12,3 +12,10 @@ export const fetchTransactionHistory = async (
     );
     return response.json();
 };
+
+export const fetchTransactionDetails = async (txId: string) => {
+    const response = await fetch(
+        `${API_BASE}/extended/v1/tx/${txId}`
+    );
+    return response.json();
+};
