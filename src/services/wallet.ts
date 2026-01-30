@@ -20,3 +20,7 @@ export const connectWallet = (
         userSession,
     });
 };
+
+export const disconnectWallet = (userSession: UserSession) => {
+    userSession.signUserOut('/');
+};
