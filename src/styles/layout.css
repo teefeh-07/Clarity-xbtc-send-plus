@@ -1,0 +1,9 @@
+/* Layout styles */
+.app-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--spacing-md) var(--spacing-xl);
+    background: var(--color-surface);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
