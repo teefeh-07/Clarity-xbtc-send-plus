@@ -18,3 +18,16 @@ export const fetchWithRetry = async (
     }
     throw new Error('Max retries reached');
 };
+
+export const buildApiUrl = (
+    endpoint: string,
+    params?: Record<string, string>
+): string => {
+    const url = new URL(endpoint, HIRO_API);
+    if (params) {
+        Object.entries(params).forEach(([key, value]) => {
+            url.searchParams.append(key, value);
+        });
+    }
+    return url.toString();
+};
