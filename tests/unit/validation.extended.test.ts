@@ -11,3 +11,15 @@ describe('isValidStacksAddress', () => {
         expect(isValidStacksAddress('')).toBe(false);
     });
 });
+
+describe('isValidAmount', () => {
+    it('should accept positive amounts', () => {
+        expect(isValidAmount(100)).toBe(true);
+        expect(isValidAmount(0.001)).toBe(true);
+    });
+
+    it('should reject invalid amounts', () => {
+        expect(isValidAmount(0)).toBe(false);
+        expect(isValidAmount(-1)).toBe(false);
+    });
+});
